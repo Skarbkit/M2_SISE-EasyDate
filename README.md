@@ -1,6 +1,6 @@
 # M2_SISE-EasyDate
 
-_Read this in other languages_: [English](https://github.com/Skarbkit/M2_SISE-EasyDate/blob/master/README.en.md), [Français](https://github.com/Skarbkit/M2_SISE-EasyDate/blob/master/README.fr.md).
+_Read this in other languages_: [English](https://github.com/Skarbkit/M2_SISE-EasyDate/blob/master/README.en.md), [Français](https://github.com/Skarbkit/M2_SISE-EasyDate/blob/master/README.md).
 
 Ce projet fait partie des modalités d’évaluations de la Programmation Python du Master 2 SISE à l’Université Lumière Lyon 2 pour l’année 2022 - 2023. 
 
