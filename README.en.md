@@ -4,7 +4,7 @@ _Read this in other languages_: [English](https://github.com/Skarbkit/M2_SISE-Ea
 
 This project is part of the Python Programming evaluation modalities of the Master 2 SISE at the Université Lumière Lyon 2 for the year 2022 - 2023.
 
-Description of the git repository:
+## Description of the git repository:
   - initial_datasets, folder containing the original datasets for the project
   - scripts_colab, folder containing the different works on the design of the predictive model
     - cleaning_process, folder containing train and submissions data processing scripts and the finalized datasets
