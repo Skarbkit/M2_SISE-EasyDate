@@ -104,6 +104,9 @@ def bardata(nb_sortie_rencontre):
     fig_date.update_layout(showlegend = False)
     return(fig_date)
 
+#fonction qui renvoi le line plot de la moyenne de chaque attribut par vague 
+#et aussi selon le sexe : k (k=2 : both)
+#et match (n=1) ou non (n=0)
 def scatter_attributes(n,k):
     #selection des matchs ou non match
     df_match=df.loc[(df.match==n)]
