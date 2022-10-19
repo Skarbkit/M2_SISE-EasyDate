@@ -131,12 +131,13 @@ def scatter_attributes(n,k):
     #remtter les valeurs en numérique
     df_scatter[["wave", "mean"]] = df_scatter[["wave", "mean"]].apply(pd.to_numeric)
     #construction du scatter plot
-    fig_scatter=px.scatter(df_scatter, x='wave', y='mean',color='attributs')
+    #fig_scatter=px.scatter(df_scatter, x='wave', y='mean',color='attributs',title='mean for each attributs for each wave')
+    fig_scatter=px.line(df_scatter, x='wave', y='mean',color='attributs',title='mean for each attributs for each wave')
     return(fig_scatter)
 
 #Définition d'un composant carte pour disposer d'une image de l'application
 card_image=dbc.Card([
-    dbc.CardImg(src="http://christophe.deleuze.free.fr/easydate_logo.png",top=True, bottom=False,title="image by ???",alt="Sorry",style={'height':'30vh'})
+    dbc.CardImg(src="https://github.com/Skarbkit/M2_SISE-EasyDate/blob/9b038ce6099183765676100a72ef95eab9220cde/Dash/logo.png?raw=true",top=True, bottom=False,title="image by ???",alt="Sorry",style={'height':'30vh'})
     ],    
             style={'height':'100%'} #pour que les cartes sur une même ligne soient toutes de la même hauteur
         )
@@ -160,13 +161,16 @@ card_filter_gender=dbc.Card([
                                 html.H4("Select gender if you want",className="Card-text"),
                                 #création de la barre de défilement pour sélectionner le sexe
                                 #servira de input dans la fonction callback
-                                dcc.Dropdown(id='sex-dropdown',options=sex_dict,value=2),  
+                                dcc.Dropdown(id='sex-dropdown',options=sex_dict,value=2,style = {"color":"black"}),  
                             ]),
-                        dbc.CardFooter(dcc.RadioItems(id='match-items',options=[{"label": html.Div(['Match'], style={'font-size': 22}),"value": 1},
+                        #pas de page de la carte
+                        dbc.CardFooter(dcc.RadioItems(id='match-items',
+                        options=[{"label": 
+                        html.Div(['Match'], style={'font-size': 22}),"value": 1},
                                 {"label": html.Div(['No Match'], style={'font-size': 22}),"value": 0}],value=1),),
                         ],
                         color="secondary", #choix de la couleur
-                        inverse=False,
+                        inverse=True,
                         outline=False, #True enlève la couleur de la carte
                         style={'height':'100%'},
                         className="w-75",
